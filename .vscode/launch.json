@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "OrderViewController",
+            "request": "launch",
+            "mainClass": "model.OrderViewController",
+            "projectName": "ProjectOOP_Nhom13_MinhDH_MyWork_e8dc9276"
+        },
+        {
+            "type": "java",
             "name": "MainController",
             "request": "launch",
             "mainClass": "MainController",

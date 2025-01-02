@@ -1,4 +1,5 @@
-// MainController.java
+package model;
+// OrderViewController.java
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableCellRenderer;
@@ -11,7 +12,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-public class MainController {
+public class OrderViewController {
     private JFrame mainFrame;
     private JTabbedPane tabbedPane;
     private OrderCreateBO orderCreateBO;
@@ -29,7 +30,7 @@ public class MainController {
         return productBO;
     }
 
-    public MainController() {
+    public OrderViewController() {
         // Initialize business objects
         orderCreateBO = new OrderCreateBO();
         orderDetailsBO = new OrderDetailsBO();
@@ -149,10 +150,10 @@ public class MainController {
     class ButtonEditor extends DefaultCellEditor {
         protected JButton button;
         private String orderId;
-        private MainController controller;
+        private OrderViewController controller;
         private String actionType; // "products", "details", or "tracking"
     
-        public ButtonEditor(JCheckBox checkBox, MainController controller, String actionType) {
+        public ButtonEditor(JCheckBox checkBox, OrderViewController controller, String actionType) {
             super(checkBox);
             this.controller = controller;
             this.actionType = actionType;
@@ -373,7 +374,7 @@ public class MainController {
     }
     
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new MainController());
+        SwingUtilities.invokeLater(() -> new OrderViewController());
     }
 }
 
